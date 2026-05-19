@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="基于 RAG 与 Multi-Agent 的企业公众号智能内容生成平台项目展示页" />
-  <title>RAG + Multi-Agent 企业公众号智能内容生成平台</title>
+  <meta name="description" content="基于 RAG 与 Multi-Agent 的企业公众号智能内容生成平台项目展示页，包含演示视频、系统截图、架构设计与本地运行说明。" />
+  <title>AI ContentOps | 企业公众号智能内容生成平台</title>
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
@@ -16,9 +16,9 @@
     <nav class="site-nav" aria-label="页面导航">
       <a href="#overview">概览</a>
       <a href="#video">演示</a>
+      <a href="#screenshots">截图</a>
       <a href="#architecture">架构</a>
       <a href="#features">亮点</a>
-      <a href="#materials">素材</a>
       <a href="#run">运行</a>
     </nav>
   </header>
@@ -27,50 +27,41 @@
     <section class="hero">
       <div class="hero-copy reveal">
         <p class="eyebrow">RAG · Multi-Agent · Vue3 · FastAPI</p>
-        <h1>企业公众号智能<br />内容生成平台</h1>
+        <h1>
+          <span>企业公众号智能</span>
+          <span>内容生成平台</span>
+        </h1>
         <p class="hero-text">
-          一个面向企业内容运营的 AI 全栈项目：把企业知识库、外部资讯、Agent 编排、公众号成稿预览与历史归档串成可追踪的内容生产流水线。
+          <span>一个面向企业内容运营的 AI 全栈项目：</span>
+          <span>把企业知识库、外部资讯检索、Agent 编排、</span>
+          <span>公众号成稿预览与历史归档，</span>
+          <span>串成可追踪的内容生产流水线。</span>
         </p>
         <div class="hero-actions">
           <a class="button primary" href="#video">查看演示视频</a>
-          <a class="button" href="#architecture">系统架构</a>
+          <a class="button" href="#screenshots">浏览系统截图</a>
           <a class="button ghost" href="https://github.com/CengLin-alt/ai-contentops-showcase" target="_blank" rel="noreferrer">展示页仓库</a>
+        </div>
+        <div class="hero-stats" aria-label="项目能力指标">
+          <div><strong>RAG</strong><span>企业知识库检索增强</span></div>
+          <div><strong>5+</strong><span>Agent 工作流节点</span></div>
+          <div><strong>HTML</strong><span>公众号成稿预览</span></div>
         </div>
       </div>
 
-      <aside class="hero-console reveal" aria-label="项目工作流概览">
-        <div class="console-header">
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <strong>workflow.trace</strong>
+      <aside class="hero-product reveal" aria-label="系统首页截图预览">
+        <div class="product-window">
+          <div class="window-bar">
+            <span></span>
+            <span></span>
+            <span></span>
+            <b>live.system.preview</b>
+          </div>
+          <img src="./images/系统首页.png" alt="企业公众号智能内容生成平台首页截图" />
         </div>
-        <div class="flow-stack">
-          <div class="flow-node active">
-            <span>01</span>
-            <b>Input</b>
-            <p>主题、受众、图片素材、内容目标</p>
-          </div>
-          <div class="flow-node">
-            <span>02</span>
-            <b>RAG</b>
-            <p>企业资料检索、外部资讯增强</p>
-          </div>
-          <div class="flow-node">
-            <span>03</span>
-            <b>Agent</b>
-            <p>分析、研究、写作、排版、交付</p>
-          </div>
-          <div class="flow-node">
-            <span>04</span>
-            <b>Preview</b>
-            <p>公众号 HTML 成稿预览与历史归档</p>
-          </div>
-        </div>
-        <div class="console-metrics">
-          <div><strong>5+</strong><span>Agent 节点</span></div>
-          <div><strong>TXT/PDF</strong><span>知识导入</span></div>
-          <div><strong>HTML</strong><span>成稿输出</span></div>
+        <div class="product-caption">
+          <span>真实系统界面</span>
+          <p>首屏展示使用你准备的系统截图，不使用任何公司样册或不可公开业务图片。</p>
         </div>
       </aside>
     </section>
@@ -78,18 +69,21 @@
     <section id="overview" class="section overview">
       <div class="section-heading">
         <p class="eyebrow">Project Overview</p>
-        <h2>从“人工写稿”到“AI 工作流成稿”</h2>
+        <h2>从“人工写稿”到<br />“AI 工作流成稿”</h2>
       </div>
       <div class="overview-grid">
         <article class="summary-card reveal">
+          <span>Problem</span>
           <h3>业务问题</h3>
           <p>企业公众号内容生产需要查资料、理解专业术语、组织素材、排版和审核。人工方式链路长，质量依赖个人经验，热点响应速度也不稳定。</p>
         </article>
         <article class="summary-card reveal">
+          <span>Solution</span>
           <h3>解决方案</h3>
           <p>系统通过 RAG 召回企业知识，再由 Multi-Agent 拆解任务，自动完成资料增强、文章生成、HTML 渲染、预览保存和发布入口衔接。</p>
         </article>
         <article class="summary-card reveal">
+          <span>Ownership</span>
           <h3>个人职责</h3>
           <p>负责 FastAPI 后端、Vue3 前端、RAG 知识库、LangGraph 工作流、公众号生成流水线、演示视频和项目展示页整理。</p>
         </article>
@@ -122,7 +116,7 @@
       </div>
       <div class="video-layout">
         <div class="video-frame reveal">
-          <video controls preload="metadata">
+          <video controls preload="metadata" poster="./images/agent生成和预览页.png">
             <source src="./assets/demo.mp4" type="video/mp4" />
             当前浏览器不支持视频播放，请下载项目中的 demo.mp4 查看。
           </video>
@@ -138,6 +132,60 @@
           <p>当前视频已替换为最终版：<code>data/演示视频-最终版.mp4</code>。</p>
         </div>
       </div>
+    </section>
+
+    <section id="screenshots" class="section screenshots-section">
+      <div class="section-heading">
+        <p class="eyebrow">Product Screens</p>
+        <h2>真实系统截图</h2>
+      </div>
+      <div class="screen-feature reveal">
+        <div class="screen-copy">
+          <span class="screen-index">01 / Homepage</span>
+          <h3>内容运营工作台首页</h3>
+          <p>首页承担项目的第一印象：说明系统目标、核心能力和进入生成流程的入口，让面试官能马上理解这是一个完整可操作的内容生成平台。</p>
+        </div>
+        <figure class="screen-shot large">
+          <img src="./images/系统首页.png" alt="系统首页截图" />
+        </figure>
+      </div>
+
+      <div class="screens-grid">
+        <article class="screen-card reveal">
+          <figure class="screen-shot">
+            <img src="./images/rag检索页.png" alt="RAG 知识库检索页面截图" />
+          </figure>
+          <div>
+            <span>02 / RAG</span>
+            <h3>知识库检索页</h3>
+            <p>展示文档上传、知识库检索、召回内容与相似度结果，突出 RAG 能力不是概念，而是做成了可交互页面。</p>
+          </div>
+        </article>
+        <article class="screen-card reveal">
+          <figure class="screen-shot">
+            <img src="./images/agent生成和预览页.png" alt="Agent 生成与预览页面截图" />
+          </figure>
+          <div>
+            <span>03 / Agent</span>
+            <h3>生成与预览页</h3>
+            <p>展示主题输入、Agent 执行进度、生成日志和移动端公众号预览，体现长任务可观察、结果可检查。</p>
+          </div>
+        </article>
+        <article class="screen-card reveal">
+          <figure class="screen-shot">
+            <img src="./images/历史记录.png" alt="历史记录页面截图" />
+          </figure>
+          <div>
+            <span>04 / Archive</span>
+            <h3>历史作品归档</h3>
+            <p>展示生成结果沉淀、列表检索和后续复用场景，让项目从一次性 Demo 延伸为可持续使用的业务工具。</p>
+          </div>
+        </article>
+      </div>
+
+      <p class="privacy-note reveal">
+        展示页只使用系统界面截图与脱敏说明图，不放置任何公司样册、产品图片、客户资料或带有公司水印的不可公开素材。
+      </p>
     </section>
 
     <section id="architecture" class="section architecture-section">
@@ -196,35 +244,6 @@
           <h3>AI Coding 实践</h3>
           <p>使用 VS Code + Codex 辅助需求拆解、模块实现、接口联调、异常排查和项目文档沉淀。</p>
         </article>
-      </div>
-    </section>
-
-    <section id="materials" class="section materials-section">
-      <div class="section-heading">
-        <p class="eyebrow">Material Suggestion</p>
-        <h2>业务素材区应该放什么图</h2>
-      </div>
-      <div class="material-layout">
-        <div class="material-placeholder reveal">
-          <div class="placeholder-grid">
-            <span>RAG</span>
-            <span>Agent</span>
-            <span>Preview</span>
-            <span>Archive</span>
-          </div>
-          <h3>这里先不放吉康样册或产品图片</h3>
-          <p>建议替换为脱敏、说明性质的图片，而不是任何公司样册、产品图或客户资料。</p>
-        </div>
-        <div class="material-advice reveal">
-          <h3>你可以去找这几类图</h3>
-          <ul>
-            <li>系统真实截图：RAG 检索页、生成页、Agent 日志页、HTML 预览页。</li>
-            <li>脱敏流程图：从“资料导入”到“公众号成稿”的流程说明图。</li>
-            <li>通用视觉图：无品牌、无公司信息的 AI 内容运营工作流示意图。</li>
-            <li>数据说明图：信息源覆盖矩阵、知识库结构、生成前后对比图。</li>
-          </ul>
-          <p class="warning">不要放：吉康公司样册图片、产品实拍、客户案例、带公司水印或任何不可公开资料。</p>
-        </div>
       </div>
     </section>
 
