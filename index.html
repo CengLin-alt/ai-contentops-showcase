@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="基于 RAG 与 Multi-Agent 的企业公众号智能内容生成平台项目展示页" />
+  <title>RAG + Multi-Agent 企业公众号智能内容生成平台</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="返回顶部">
+      <span class="brand-mark"></span>
+      <span>AI ContentOps</span>
+    </a>
+    <nav class="site-nav" aria-label="页面导航">
+      <a href="#overview">概览</a>
+      <a href="#video">演示</a>
+      <a href="#architecture">架构</a>
+      <a href="#features">功能</a>
+      <a href="#run">运行</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">RAG · Multi-Agent · Vue + FastAPI</p>
+        <h1>企业公众号智能<br />内容生成平台</h1>
+        <p class="hero-text">
+          面向环保设备企业内容运营场景，把企业知识库、外部资讯采集、Agent 工作流、公众号排版预览和草稿箱发布组织成一条可追踪的 AI 内容生产流水线。
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#video">查看演示视频</a>
+          <a class="button" href="#architecture">查看系统架构</a>
+          <a class="button ghost" href="#run">本地运行方式</a>
+        </div>
+      </div>
+
+      <div class="hero-panel reveal" aria-label="项目能力概览">
+        <div class="panel-topline">
+          <span>Workflow Snapshot</span>
+          <span>2026</span>
+        </div>
+        <img src="./assets/cover-preview.png" alt="项目说明文档封面预览" />
+        <div class="hero-stats">
+          <div>
+            <strong>5+</strong>
+            <span>Agent 节点</span>
+          </div>
+          <div>
+            <strong>8</strong>
+            <span>核心流程</span>
+          </div>
+          <div>
+            <strong>TXT/PDF</strong>
+            <span>知识导入</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview" class="section overview">
+      <div class="section-heading">
+        <p class="eyebrow">Project Overview</p>
+        <h2>从推广主题到公众号成稿的闭环平台</h2>
+      </div>
+      <div class="overview-grid">
+        <article class="summary-card reveal">
+          <h3>业务问题</h3>
+          <p>传统公众号内容生产依赖人工查资料、写文案、找配图、排版和审核。面对专业设备参数、环保政策和行业热点时，内容质量和产出效率都不稳定。</p>
+        </article>
+        <article class="summary-card reveal">
+          <h3>解决方案</h3>
+          <p>平台通过 RAG 召回企业资料和行业知识，再由多 Agent 拆解任务、生成文章、处理素材、渲染 HTML，并提供预览、保存和发布入口。</p>
+        </article>
+        <article class="summary-card reveal">
+          <h3>个人职责</h3>
+          <p>负责前后端分离架构、FastAPI 接口、RAG 知识库、LangGraph 工作流、公众号生成流水线、前端页面和演示文档整理。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section metrics">
+      <div class="metric-item reveal">
+        <span class="metric-number">10-25</span>
+        <span class="metric-label">分钟完成单篇生成流程</span>
+      </div>
+      <div class="metric-item reveal">
+        <span class="metric-number">Top-K</span>
+        <span class="metric-label">企业知识库相似度检索</span>
+      </div>
+      <div class="metric-item reveal">
+        <span class="metric-number">HTML</span>
+        <span class="metric-label">公众号成稿预览与归档</span>
+      </div>
+      <div class="metric-item reveal">
+        <span class="metric-number">Codex</span>
+        <span class="metric-label">AI Coding 协作开发</span>
+      </div>
+    </section>
+
+    <section id="video" class="section video-section">
+      <div class="section-heading">
+        <p class="eyebrow">Demo Video</p>
+        <h2>完整演示视频</h2>
+      </div>
+      <div class="video-layout">
+        <div class="video-frame reveal">
+          <video controls preload="metadata" poster="./assets/cover-preview.png">
+            <source src="./assets/demo.mp4" type="video/mp4" />
+            当前浏览器不支持视频播放，请下载项目中的 demo.mp4 查看。
+          </video>
+        </div>
+        <div class="video-notes reveal">
+          <h3>演示流程</h3>
+          <ol>
+            <li>导入企业资料，构建 RAG 知识库。</li>
+            <li>输入公众号推广主题和目标受众。</li>
+            <li>查看 Agent 执行日志和生成进度。</li>
+            <li>预览公众号 HTML 成稿并保存历史。</li>
+          </ol>
+          <p>部署到 GitHub Pages 前，请确认视频中没有 API Key、手机号、邮箱、后台 Token 或企业敏感资料。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="architecture" class="section architecture-section">
+      <div class="section-heading">
+        <p class="eyebrow">System Design</p>
+        <h2>系统架构与核心流程</h2>
+      </div>
+      <div class="tab-shell reveal">
+        <div class="tab-list" role="tablist" aria-label="架构图切换">
+          <button class="tab-button active" type="button" data-tab="architecture">总体架构</button>
+          <button class="tab-button" type="button" data-tab="workflow">端到端流程</button>
+          <button class="tab-button" type="button" data-tab="agents">Agent 协作</button>
+          <button class="tab-button" type="button" data-tab="rag">RAG 检索</button>
+          <button class="tab-button" type="button" data-tab="evaluation">质量评估</button>
+        </div>
+        <figure class="diagram-card">
+          <img id="diagramImage" src="./assets/architecture.png" alt="系统总体架构图" />
+          <figcaption id="diagramCaption">前端交互层、后端服务层、智能体工作流层、RAG 知识库层和发布归档层组成完整闭环。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="features" class="section feature-section">
+      <div class="section-heading">
+        <p class="eyebrow">Core Features</p>
+        <h2>项目亮点</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card reveal">
+          <span>01</span>
+          <h3>RAG 知识库</h3>
+          <p>支持 TXT/PDF 文档导入、文本切分、Embedding 向量化、MD5 去重、Chroma 持久化和 Top-K 检索。</p>
+        </article>
+        <article class="feature-card reveal">
+          <span>02</span>
+          <h3>Multi-Agent 工作流</h3>
+          <p>基于 LangGraph 将需求分析、资料增强、写作、排版、交付拆成可观察节点，提升生成过程可控性。</p>
+        </article>
+        <article class="feature-card reveal">
+          <span>03</span>
+          <h3>异步生成进度</h3>
+          <p>后端线程执行生成任务，前端轮询展示 Agent 日志、当前阶段和最终结果，避免长任务黑盒化。</p>
+        </article>
+        <article class="feature-card reveal">
+          <span>04</span>
+          <h3>公众号成稿预览</h3>
+          <p>将写作策略、RAG 上下文、外部资讯和图片素材注入流水线，输出适配公众号展示的 HTML 成稿。</p>
+        </article>
+        <article class="feature-card reveal">
+          <span>05</span>
+          <h3>历史归档与发布</h3>
+          <p>支持预览结果保存到历史作品库，并预留同步到微信公众号草稿箱的发布入口。</p>
+        </article>
+        <article class="feature-card reveal">
+          <span>06</span>
+          <h3>AI Coding 工程实践</h3>
+          <p>使用 VS Code + Codex 辅助需求拆解、模块实现、接口联调、异常排查和简历级文档沉淀。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section gallery-section">
+      <div class="section-heading">
+        <p class="eyebrow">Material & Output</p>
+        <h2>业务素材与生成结果</h2>
+      </div>
+      <div class="gallery-grid">
+        <figure class="large-shot reveal">
+          <img src="./assets/product-collage.png" alt="环保设备企业素材拼图" />
+          <figcaption>企业产品资料、设备图片和技术素材为 RAG 与内容生成提供业务上下文。</figcaption>
+        </figure>
+        <div class="timeline reveal">
+          <h3>工作流路径</h3>
+          <div class="timeline-step"><b>01</b><span>上传知识资料</span></div>
+          <div class="timeline-step"><b>02</b><span>检索内部知识与外部资讯</span></div>
+          <div class="timeline-step"><b>03</b><span>Agent 拆解并生成文章</span></div>
+          <div class="timeline-step"><b>04</b><span>渲染 HTML 预览并归档</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="run" class="section run-section">
+      <div class="section-heading">
+        <p class="eyebrow">Run Locally</p>
+        <h2>本地运行方式</h2>
+      </div>
+      <div class="run-grid">
+        <article class="code-card reveal">
+          <h3>后端服务</h3>
+          <pre><code>pip install -r requirements.txt
+uvicorn backend.app:app --reload --host 127.0.0.1 --port 8000</code></pre>
+        </article>
+        <article class="code-card reveal">
+          <h3>前端页面</h3>
+          <pre><code>cd frontend
+npm install
+npm run dev</code></pre>
+        </article>
+        <article class="code-card reveal">
+          <h3>展示页</h3>
+          <pre><code>cd project_showcase
+start index.html</code></pre>
+        </article>
+      </div>
+      <p class="run-note">
+        开源或部署前，请删除真实 API Key、.env、日志、node_modules、__pycache__、大体积缓存和敏感业务资料。
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>AI ContentOps Project Showcase</strong>
+      <span>RAG + Multi-Agent + Full-Stack Engineering</span>
+    </div>
+    <a href="#top">回到顶部</a>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
