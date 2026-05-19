@@ -17,7 +17,8 @@
       <a href="#overview">概览</a>
       <a href="#video">演示</a>
       <a href="#architecture">架构</a>
-      <a href="#features">功能</a>
+      <a href="#features">亮点</a>
+      <a href="#materials">素材</a>
       <a href="#run">运行</a>
     </nav>
   </header>
@@ -25,74 +26,88 @@
   <main id="top">
     <section class="hero">
       <div class="hero-copy reveal">
-        <p class="eyebrow">RAG · Multi-Agent · Vue + FastAPI</p>
+        <p class="eyebrow">RAG · Multi-Agent · Vue3 · FastAPI</p>
         <h1>企业公众号智能<br />内容生成平台</h1>
         <p class="hero-text">
-          面向环保设备企业内容运营场景，把企业知识库、外部资讯采集、Agent 工作流、公众号排版预览和草稿箱发布组织成一条可追踪的 AI 内容生产流水线。
+          一个面向企业内容运营的 AI 全栈项目：把企业知识库、外部资讯、Agent 编排、公众号成稿预览与历史归档串成可追踪的内容生产流水线。
         </p>
         <div class="hero-actions">
           <a class="button primary" href="#video">查看演示视频</a>
-          <a class="button" href="#architecture">查看系统架构</a>
-          <a class="button ghost" href="#run">本地运行方式</a>
+          <a class="button" href="#architecture">系统架构</a>
+          <a class="button ghost" href="https://github.com/CengLin-alt/ai-contentops-showcase" target="_blank" rel="noreferrer">展示页仓库</a>
         </div>
       </div>
 
-      <div class="hero-panel reveal" aria-label="项目能力概览">
-        <div class="panel-topline">
-          <span>Workflow Snapshot</span>
-          <span>2026</span>
+      <aside class="hero-console reveal" aria-label="项目工作流概览">
+        <div class="console-header">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <strong>workflow.trace</strong>
         </div>
-        <img src="./assets/cover-preview.png" alt="项目说明文档封面预览" />
-        <div class="hero-stats">
-          <div>
-            <strong>5+</strong>
-            <span>Agent 节点</span>
+        <div class="flow-stack">
+          <div class="flow-node active">
+            <span>01</span>
+            <b>Input</b>
+            <p>主题、受众、图片素材、内容目标</p>
           </div>
-          <div>
-            <strong>8</strong>
-            <span>核心流程</span>
+          <div class="flow-node">
+            <span>02</span>
+            <b>RAG</b>
+            <p>企业资料检索、外部资讯增强</p>
           </div>
-          <div>
-            <strong>TXT/PDF</strong>
-            <span>知识导入</span>
+          <div class="flow-node">
+            <span>03</span>
+            <b>Agent</b>
+            <p>分析、研究、写作、排版、交付</p>
+          </div>
+          <div class="flow-node">
+            <span>04</span>
+            <b>Preview</b>
+            <p>公众号 HTML 成稿预览与历史归档</p>
           </div>
         </div>
-      </div>
+        <div class="console-metrics">
+          <div><strong>5+</strong><span>Agent 节点</span></div>
+          <div><strong>TXT/PDF</strong><span>知识导入</span></div>
+          <div><strong>HTML</strong><span>成稿输出</span></div>
+        </div>
+      </aside>
     </section>
 
     <section id="overview" class="section overview">
       <div class="section-heading">
         <p class="eyebrow">Project Overview</p>
-        <h2>从推广主题到公众号成稿的闭环平台</h2>
+        <h2>从“人工写稿”到“AI 工作流成稿”</h2>
       </div>
       <div class="overview-grid">
         <article class="summary-card reveal">
           <h3>业务问题</h3>
-          <p>传统公众号内容生产依赖人工查资料、写文案、找配图、排版和审核。面对专业设备参数、环保政策和行业热点时，内容质量和产出效率都不稳定。</p>
+          <p>企业公众号内容生产需要查资料、理解专业术语、组织素材、排版和审核。人工方式链路长，质量依赖个人经验，热点响应速度也不稳定。</p>
         </article>
         <article class="summary-card reveal">
           <h3>解决方案</h3>
-          <p>平台通过 RAG 召回企业资料和行业知识，再由多 Agent 拆解任务、生成文章、处理素材、渲染 HTML，并提供预览、保存和发布入口。</p>
+          <p>系统通过 RAG 召回企业知识，再由 Multi-Agent 拆解任务，自动完成资料增强、文章生成、HTML 渲染、预览保存和发布入口衔接。</p>
         </article>
         <article class="summary-card reveal">
           <h3>个人职责</h3>
-          <p>负责前后端分离架构、FastAPI 接口、RAG 知识库、LangGraph 工作流、公众号生成流水线、前端页面和演示文档整理。</p>
+          <p>负责 FastAPI 后端、Vue3 前端、RAG 知识库、LangGraph 工作流、公众号生成流水线、演示视频和项目展示页整理。</p>
         </article>
       </div>
     </section>
 
-    <section class="section metrics">
+    <section class="metrics" aria-label="项目指标">
       <div class="metric-item reveal">
         <span class="metric-number">10-25</span>
-        <span class="metric-label">分钟完成单篇生成流程</span>
+        <span class="metric-label">分钟完成单篇生成闭环</span>
       </div>
       <div class="metric-item reveal">
         <span class="metric-number">Top-K</span>
         <span class="metric-label">企业知识库相似度检索</span>
       </div>
       <div class="metric-item reveal">
-        <span class="metric-number">HTML</span>
-        <span class="metric-label">公众号成稿预览与归档</span>
+        <span class="metric-number">5+</span>
+        <span class="metric-label">可观察 Agent 节点</span>
       </div>
       <div class="metric-item reveal">
         <span class="metric-number">Codex</span>
@@ -103,24 +118,24 @@
     <section id="video" class="section video-section">
       <div class="section-heading">
         <p class="eyebrow">Demo Video</p>
-        <h2>完整演示视频</h2>
+        <h2>最终版演示视频</h2>
       </div>
       <div class="video-layout">
         <div class="video-frame reveal">
-          <video controls preload="metadata" poster="./assets/cover-preview.png">
+          <video controls preload="metadata">
             <source src="./assets/demo.mp4" type="video/mp4" />
             当前浏览器不支持视频播放，请下载项目中的 demo.mp4 查看。
           </video>
         </div>
         <div class="video-notes reveal">
-          <h3>演示流程</h3>
+          <h3>视频展示什么</h3>
           <ol>
-            <li>导入企业资料，构建 RAG 知识库。</li>
-            <li>输入公众号推广主题和目标受众。</li>
-            <li>查看 Agent 执行日志和生成进度。</li>
-            <li>预览公众号 HTML 成稿并保存历史。</li>
+            <li>知识库资料导入与 RAG 检索验证。</li>
+            <li>输入公众号主题、受众和内容要求。</li>
+            <li>观察 Agent 执行日志与生成进度。</li>
+            <li>查看 HTML 成稿预览与历史归档结果。</li>
           </ol>
-          <p>部署到 GitHub Pages 前，请确认视频中没有 API Key、手机号、邮箱、后台 Token 或企业敏感资料。</p>
+          <p>当前视频已替换为最终版：<code>data/演示视频-最终版.mp4</code>。</p>
         </div>
       </div>
     </section>
@@ -159,7 +174,7 @@
         <article class="feature-card reveal">
           <span>02</span>
           <h3>Multi-Agent 工作流</h3>
-          <p>基于 LangGraph 将需求分析、资料增强、写作、排版、交付拆成可观察节点，提升生成过程可控性。</p>
+          <p>基于 LangGraph 将分析、检索、写作、排版、交付拆分为可观察节点，提升生成过程可控性。</p>
         </article>
         <article class="feature-card reveal">
           <span>03</span>
@@ -169,7 +184,7 @@
         <article class="feature-card reveal">
           <span>04</span>
           <h3>公众号成稿预览</h3>
-          <p>将写作策略、RAG 上下文、外部资讯和图片素材注入流水线，输出适配公众号展示的 HTML 成稿。</p>
+          <p>将 RAG 上下文、外部资讯、图片素材和 CSS 主题注入生成流水线，输出可预览的 HTML 成稿。</p>
         </article>
         <article class="feature-card reveal">
           <span>05</span>
@@ -178,28 +193,37 @@
         </article>
         <article class="feature-card reveal">
           <span>06</span>
-          <h3>AI Coding 工程实践</h3>
-          <p>使用 VS Code + Codex 辅助需求拆解、模块实现、接口联调、异常排查和简历级文档沉淀。</p>
+          <h3>AI Coding 实践</h3>
+          <p>使用 VS Code + Codex 辅助需求拆解、模块实现、接口联调、异常排查和项目文档沉淀。</p>
         </article>
       </div>
     </section>
 
-    <section class="section gallery-section">
+    <section id="materials" class="section materials-section">
       <div class="section-heading">
-        <p class="eyebrow">Material & Output</p>
-        <h2>业务素材与生成结果</h2>
+        <p class="eyebrow">Material Suggestion</p>
+        <h2>业务素材区应该放什么图</h2>
       </div>
-      <div class="gallery-grid">
-        <figure class="large-shot reveal">
-          <img src="./assets/product-collage.png" alt="环保设备企业素材拼图" />
-          <figcaption>企业产品资料、设备图片和技术素材为 RAG 与内容生成提供业务上下文。</figcaption>
-        </figure>
-        <div class="timeline reveal">
-          <h3>工作流路径</h3>
-          <div class="timeline-step"><b>01</b><span>上传知识资料</span></div>
-          <div class="timeline-step"><b>02</b><span>检索内部知识与外部资讯</span></div>
-          <div class="timeline-step"><b>03</b><span>Agent 拆解并生成文章</span></div>
-          <div class="timeline-step"><b>04</b><span>渲染 HTML 预览并归档</span></div>
+      <div class="material-layout">
+        <div class="material-placeholder reveal">
+          <div class="placeholder-grid">
+            <span>RAG</span>
+            <span>Agent</span>
+            <span>Preview</span>
+            <span>Archive</span>
+          </div>
+          <h3>这里先不放吉康样册或产品图片</h3>
+          <p>建议替换为脱敏、说明性质的图片，而不是任何公司样册、产品图或客户资料。</p>
+        </div>
+        <div class="material-advice reveal">
+          <h3>你可以去找这几类图</h3>
+          <ul>
+            <li>系统真实截图：RAG 检索页、生成页、Agent 日志页、HTML 预览页。</li>
+            <li>脱敏流程图：从“资料导入”到“公众号成稿”的流程说明图。</li>
+            <li>通用视觉图：无品牌、无公司信息的 AI 内容运营工作流示意图。</li>
+            <li>数据说明图：信息源覆盖矩阵、知识库结构、生成前后对比图。</li>
+          </ul>
+          <p class="warning">不要放：吉康公司样册图片、产品实拍、客户案例、带公司水印或任何不可公开资料。</p>
         </div>
       </div>
     </section>
