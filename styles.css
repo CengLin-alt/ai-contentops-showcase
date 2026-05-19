@@ -330,28 +330,6 @@ h3 {
   object-position: top center;
 }
 
-.product-caption {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 14px;
-  align-items: center;
-  padding: 16px 18px;
-  border: 1px solid var(--line);
-  background: rgba(16, 24, 22, 0.72);
-}
-
-.product-caption span {
-  color: var(--green);
-  font-weight: 900;
-  white-space: nowrap;
-}
-
-.product-caption p {
-  margin-bottom: 0;
-  color: var(--muted);
-  font-size: 14px;
-}
-
 .section {
   padding: clamp(58px, 8vw, 96px) clamp(18px, 6vw, 78px);
 }
@@ -378,8 +356,7 @@ h3 {
 .feature-card,
 .code-card,
 .video-notes,
-.screen-card,
-.privacy-note {
+.screen-card {
   border: 1px solid var(--line);
   background: linear-gradient(180deg, rgba(21, 33, 29, 0.92), rgba(9, 14, 12, 0.94));
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.24);
@@ -540,14 +517,6 @@ h3 {
 .screen-feature:hover .screen-shot img {
   transform: scale(1.025);
   filter: saturate(1.08);
-}
-
-.privacy-note {
-  margin: 22px 0 0;
-  padding: 16px 18px;
-  color: var(--ink);
-  border-left: 4px solid var(--green);
-  font-weight: 800;
 }
 
 .tab-shell {
@@ -745,8 +714,7 @@ pre code {
   .run-grid,
   .metrics,
   .hero-stats,
-  .screens-grid,
-  .product-caption {
+  .screens-grid {
     grid-template-columns: 1fr;
   }
 
@@ -762,7 +730,6 @@ pre code {
   .video-frame,
   .video-notes,
   .tab-shell,
-  .privacy-note,
   .run-note {
     width: 100%;
     max-width: 100%;
@@ -792,8 +759,6 @@ pre code {
   .screen-card p,
   .video-notes p,
   .screen-copy p,
-  .product-caption p,
-  .privacy-note,
   .run-note {
     max-width: 320px;
   }
